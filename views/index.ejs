@@ -1,0 +1,51 @@
+<% include header %>
+    <h3 style="text-align:center;">The Metropolitan Museum of Art</h3>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">Category</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <% for (var i = 0; i < categorieen.length; i++) { %>
+                            <a href="/categorieen/<%- i %>">
+                                <%- categorieen[i] %>
+                            </a>
+                            <% } %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container index">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <% var teller = 1; %>
+                    <% museum.forEach(function(item){ %>
+                        <section>
+                            <h4>
+                                <a href=/items/<%- item.id %>><%- item.titel %></a>
+                            </h4>
+                            <img src="/img/<%- item.afbeeldings %>" alt="<%- item.titel %>">
+                            <p class="datum">
+                                Date:
+                                <%- item.datum %>
+                            </p>
+
+                            <p class="samenvatting">
+                                <%- item.samenvatting %>
+                            </p>
+                        </section>
+                        <% teller++;}); %>
+            </div>
+        </div>
+    </div>
+    <% include footer %>

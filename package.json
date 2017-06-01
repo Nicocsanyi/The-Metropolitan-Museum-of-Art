@@ -1,0 +1,26 @@
+{
+    "name": "Mobiel-Adamuseum-Site",
+    "version": "1.0.0",
+    "description": "Mobiel Adamuseum Site",
+    "main": "app.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "start": "node app.js"
+    },
+    "keywords": [
+    "mobiel",
+    "nieuws",
+    "dieren",
+    "node",
+    "express"
+  ],
+    "author": "Nico Csanyi",
+    "license": "ISC",
+    "homepage": "",
+    "dependencies": {
+        "ejs": "^2.5.6",
+        "express": "^4.15.2"
+    }
+}

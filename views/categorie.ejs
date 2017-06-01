@@ -1,0 +1,29 @@
+<% include header %>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1><a href="/">The Metropolitan Museum of Art</a></h1>
+                <h2>Museum article for category
+                    <%- categorieen[id] %>
+                </h2>
+                <% for (var i = 0; i < items.length; i++) { %>
+                    <% if (items[i].categorieen.indexOf(categorieen[id]) !== -1) { %>
+                        <section>
+                            <h2>
+                                <a href=/items/<%- items[i].id %>><%- items[i].titel %></a>
+                            </h2>
+                            <img src="/img/<%- items[i].afbeeldings %>" alt="<%- items[i].titel %>">
+                            <p>
+                                <%- items[i].datum %>
+                            </p>
+
+                            <p>
+                                <%- items[i].samenvatting %>
+                            </p>
+                        </section>
+                        <% } %>
+                            <% } %>
+            </div>
+        </div>
+    </div>
+    <% include footer %>
