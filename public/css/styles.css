@@ -3,6 +3,7 @@ body {
     width: 90%;
     margin: auto;
     text-align: center;
+    background-color:
 }
 
 .samenvatting {
@@ -35,10 +36,18 @@ footer {
 
 .index a {
     font-weight: 800;
-    color: red;
 }
 
-.index p.datum {
-    font-weight: 400;
+nav {
+    background-color: #E4002B
+}
+
+.headerimg {
+    width: 150px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+a {
     color: red;
 }
